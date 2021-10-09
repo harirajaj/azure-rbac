@@ -41,7 +41,7 @@ Foreach ($file in $roledefinitions) {
             Write-Output "Role Definition does not exist:"
             Write-Output "Creating new Azure Role definition"
 
-            New-AzRoleDefinition -InputFile $file
+            New-AzRoleDefinition -InputFile $BuildSourcesDirectory\$file
         }
     }
 
@@ -64,7 +64,7 @@ Foreach ($file in $roledefinitions) {
             Write-Output "Role Definition does not exist:"
             Write-Output "Creating new Azure Role definition"
 
-            New-AzRoleDefinition -InputFile $file
+            New-AzRoleDefinition -InputFile $BuildSourcesDirectory\$file
         }
     }
 }
