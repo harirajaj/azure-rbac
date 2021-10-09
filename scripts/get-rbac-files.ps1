@@ -18,7 +18,7 @@ $resultArray | ForEach-Object {
 $psStringResult = "@(" + ($psStringResult -join ',') + ")"
 
 #Set VSO variable to use in powershell script as input
-Write-Output "##vso[task.setvariable variable=roledefinitions;]$psStringResult"
+Write-Output "##vso[task.setvariable variable=roledefinitions]$psStringResult"
 
 Write-Output "Convert array to psString:"
 Write-Output $psStringResult
