@@ -1,11 +1,11 @@
 {
-    "Name": "",
+    "Name": "CUSTOM-RESOURCEHEALTH-Reader",
     "Id": "",
     "IsCustom": true,
-    "Description": "",
-    "Actions": [],
+    "Description": "Users with rights to only view Azure resource/service/subscription health.",
+    "Actions": ["Microsoft.ResourceHealth/*/read"],
     "NotActions": [],
     "DataActions": [],
     "NotDataActions": [],
-    "AssignableScopes": []
+    "AssignableScopes": ["/subscriptions/<subscriptioId1>"]
 }
