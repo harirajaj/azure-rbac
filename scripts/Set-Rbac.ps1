@@ -12,7 +12,7 @@ $BuildSourcesDirectory = "$(Resolve-Path -Path $PSScriptRoot\..)"
 Write-host "Current checked out build sources directory: [$BuildSourcesDirectory]"
 
 Foreach ($file in $roledefinitions) {
-    $Obj = Get-Content -Path $file| ConvertFrom-Json
+    $Obj = Get-Content -Path $BuildSourcesDirectory\$file| ConvertFrom-Json
     $scope = $Obj.AssignableScopes[0]
     Write-host "Here"
     If ($scope -like "*managementGroups*") {
