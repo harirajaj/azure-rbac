@@ -3,7 +3,7 @@
 Param ([Parameter(Mandatory)]
  [array]$roledefinitions
 )
-
+Write-Output "Role Definition [$roledefinition]"
 #Directory in use.
 Write-host "Current Scripting directory: [$PSScriptRoot]"
 
