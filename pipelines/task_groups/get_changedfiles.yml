@@ -5,7 +5,7 @@
       inputs:
        targetType: inline
        script: |
-       $editedFiles = git diff HEAD HEAD~ --name-only
+       $editedFiles = git ls-tree --full-tree -r --name-only HEAD
 
        $resultArray = @()
        Foreach ($file in $editedFiles) {
