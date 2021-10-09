@@ -16,6 +16,7 @@ Foreach ($file in $roledefinitions) {
     $scope = $Obj.AssignableScopes[0]
     Write-host "Here"
     If ($scope -like "*managementGroups*") {
+        Write-host "Here"
         $managementGroupSubs = ((Get-AzManagementGroup -GroupId ($scope | Split-Path -leaf) -Expand -Recurse).Children)
         If ($managementGroupSubs.Type -like "*managementGroups") {
             Set-AzContext -SubscriptionId $managementGroupSubs.children[0].Name
