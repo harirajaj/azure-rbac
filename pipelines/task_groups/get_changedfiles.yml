@@ -9,7 +9,7 @@
 
        $resultArray = @()
        Foreach ($file in $editedFiles) {
-           if ($file -like "roleDefinitions/*") {
+           if ($file -like "roleDefnitions/*") {
            $filePath = "$(Build.SourcesDirectory)\$file"
            $resultArray += $filePath
            }
