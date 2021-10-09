@@ -1,7 +1,7 @@
 # scripts/set_rbac.ps1
 #Parameters from pipeline
 Param ([Parameter(Mandatory)]
- [array]$RoleDefinitions
+ [array]$roledefinitions
 )
 
 #Directory in use.
@@ -11,7 +11,7 @@ Write-host "Current Scripting directory: [$PSScriptRoot]"
 $BuildSourcesDirectory = "$(Resolve-Path -Path $PSScriptRoot\..)"
 Write-host "Current checked out build sources directory: [$BuildSourcesDirectory]"
 
-Foreach ($file in $RoleDefinitions) {
+Foreach ($file in $roledefinitions) {
     $Obj = Get-Content -Path $file| ConvertFrom-Json
     $scope = $Obj.AssignableScopes[0]
 
