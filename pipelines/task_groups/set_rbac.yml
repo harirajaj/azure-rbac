@@ -4,7 +4,7 @@
    - task: AzurePowerShell@5
      displayName: 'Create - Update role definitions'
      inputs:
-       azureSubscription: RbacServicePrincipal
+       azureSubscription: Azure for Students
        scriptType: filePath
        scriptPath: '.\scripts\Set-Rbac.ps1'
        scriptArguments: '-RoleDefinitions $(roledefinitions)'
