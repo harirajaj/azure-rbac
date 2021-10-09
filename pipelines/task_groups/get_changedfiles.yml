@@ -3,6 +3,5 @@
     - task: PowerShell@2
       displayName: 'Get changed role definitions'
       inputs:
-       targetType: inline
-       script: | $editedFiles = git ls-tree --full-tree -r --name-only HEAD
-                 Write-Output $editedFiles
+       scriptType: filePath
+       scriptPath: '.\scripts\get_rbac_files.ps1'
