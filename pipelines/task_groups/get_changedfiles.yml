@@ -1,7 +1,12 @@
-# 'pipelines/task_groups/get_changedfiles.yml' Determine which role definition files have changed
+# 'pipelines/task_groups/set_rbac.yml' run our script that will amend/create the role definition in Azure
    steps:
-    - task: PowerShell@2
-      displayName: 'Get changed role definitions'
-      inputs:
+   ### Run powershell to set or create new Az Role definitions
+   - task: AzurePowerShell@5
+     displayName: 'Create - Update role definitions'
+     inputs:
+       azureSubscription: azureproject
        scriptType: filePath
-       scriptPath: '.\scripts\get-rbac-files.ps1'
+       scriptPath: '.\scripts\get-rbac-files.ps1'    
+       azurePowerShellVersion: latestVersion
+       errorActionPreference: silentlyContinue
+       continueOnError: true
