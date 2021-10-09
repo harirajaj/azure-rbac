@@ -4,4 +4,4 @@
       displayName: 'Get changed role definitions'
       inputs:
        scriptType: filePath
-       scriptPath: '.\scripts\get_rbac_files.ps1'
+       scriptPath: '.\scripts\get-rbac-files.ps1'
