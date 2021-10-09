@@ -7,7 +7,7 @@
        azureSubscription: azureproject
        scriptType: filePath
        scriptPath: '.\scripts\Set-Rbac.ps1'
-       scriptArguments: '-RoleDefinitions $(roledefinitions)'
+       scriptArguments: '-roledefinitions $(roledefinitions)'
        azurePowerShellVersion: latestVersion
        errorActionPreference: silentlyContinue
        continueOnError: true
