@@ -2,12 +2,12 @@
    steps:
    ### Run powershell to set or create new Az Role definitions
    - task: AzurePowerShell@5
-   displayName: 'Create - Update role definitions'
-   inputs:
+     displayName: 'Create - Update role definitions'
+     inputs:
        azureSubscription: RbacServicePrincipal
        scriptType: filePath
        scriptPath: '.\scripts\Set-Rbac.ps1'
        scriptArguments: '-RoleDefinitions $(roledefinitions)'
        azurePowerShellVersion: latestVersion
        errorActionPreference: silentlyContinue
-   continueOnError: true
+       continueOnError: true
