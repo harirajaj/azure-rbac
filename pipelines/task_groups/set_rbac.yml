@@ -8,6 +8,5 @@
        scriptType: filePath
        scriptPath: '.\scripts\Set-Rbac.ps1'
        scriptArguments: '-roledefinitions $(roledefinitions)'
-       azurePowerShellVersion: latestVersion
-       errorActionPreference: silentlyContinue
-       continueOnError: true
+       azurePowerShellVersion: latestVersion       
+       continueOnError: false
