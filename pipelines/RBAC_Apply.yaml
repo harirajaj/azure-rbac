@@ -9,14 +9,14 @@ trigger:
 stages:
 - stage: RBAC_Build
   displayName: RBAC Build
-jobs:
+  jobs:
     - job: Configure_RBAC_Definitions
       displayName: Configure RBAC Definitions
       pool:
-      name: Azure Pipelines
-      vmImage: windows-latest
-      timeoutInMinutes: 30
-      cancelTimeoutInMinutes: 5
+       name: Azure Pipelines
+       vmImage: windows-latest
+       timeoutInMinutes: 30
+       cancelTimeoutInMinutes: 5
       steps:
         - checkout: self
         - template: task_groups/get_changedfiles.yml
