@@ -1,6 +1,7 @@
 $editedFiles = git ls-tree --full-tree -r --name-only HEAD
 Write-Output $editedFiles
-$resultArray = @() Foreach ($file in $editedFiles) {
+$resultArray = @() 
+Foreach ($file in $editedFiles) {
            if ($file -like "roleDefnitions/*") {
            $filePath = "$(Build.SourcesDirectory)\$file"
            $resultArray += $filePath
